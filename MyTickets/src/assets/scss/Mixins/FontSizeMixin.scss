@@ -1,0 +1,12 @@
+@function pxToRem($pxSize) {
+    @return $pxSize / 16 + rem;
+}
+
+@mixin font-size(){
+    @for $i from 5 through 100 {
+        .fs-#{$i} {
+            font-size: pxToRem($i) !important;
+        }
+    }
+}
+
