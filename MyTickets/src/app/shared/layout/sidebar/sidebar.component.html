@@ -4,6 +4,6 @@
 </div>
 <nav class="sidebar">
   <ul>
-    <li *ngFor="let link of links"><span [classList]="link.icon"></span><a [href]="link.route">{{link.name}}</a></li>
+    <li [classList]="link.active" *ngFor="let link of links"><span [classList]="link.class"></span><a class="fs-18" [href]="link.route">{{link.name}}</a></li>
   </ul>
 </nav>

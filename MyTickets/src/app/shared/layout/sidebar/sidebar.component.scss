@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-top: 20px;
 }
 
 .sidebar {
@@ -16,24 +17,90 @@
 
   ul {
     height: 100%;
-    width: 100%;
+    width: 300px;
     position: absolute;
     list-style: none;
+    margin-top: 20px;
     padding: 0;
+
+
+    .active {
+      background-color: $PrimarlyColor;
+      * {
+        color: $ThirdTextColor;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        right: 0;
+        bottom: 100%;
+        border-bottom-right-radius: 25px;
+        box-shadow: 10px 10px 0 $PrimarlyColor;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        right: 0;
+        top: 100%;
+        border-top-right-radius: 25px;
+        box-shadow: 10px -10px 0 $PrimarlyColor;
+      }
+    }
+
 
     li {
       position: relative;
+      padding: 20px;
+      margin-bottom: 30px;
 
-      a{
+      a {
         color: $MainTextColor;
         text-decoration: none;
-        padding: 10px 10px;
+        padding: 20px 160px 20px 20px;
+        font-family: $MainFontFamily;
       }
 
 
       &:hover{
         background-color: $PrimarlyColor;
+        *{
+          color: $ThirdTextColor;
+        }
       }
+
+      &:hover::before {
+        content: '';
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        right: 0;
+        bottom: 100%;
+        border-bottom-right-radius: 25px;
+        box-shadow: 10px 10px 0 $PrimarlyColor;
+      }
+
+      &:hover::after {
+        content: '';
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        right: 0;
+        top: 100%;
+        border-top-right-radius: 25px;
+        box-shadow: 10px -10px 0 $PrimarlyColor;
+        transition: all 0.3s ease;
+      }
+
     }
   }
 }
