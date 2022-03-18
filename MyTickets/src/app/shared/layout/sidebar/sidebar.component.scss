@@ -7,7 +7,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 20px;
+  /*padding-top: 10px;*/
+
+  span {
+    color: $PrimarlyColor;
+    cursor: pointer;
+  }
 }
 
 .sidebar {
@@ -16,7 +21,7 @@
   width: 300px;
 
   ul {
-    height: 100%;
+    height: auto;
     width: 300px;
     position: absolute;
     list-style: none;
@@ -60,11 +65,16 @@
       position: relative;
       padding: 20px;
       margin-bottom: 30px;
+      color: $PrimarlyColor;
+
+      span {
+        margin-right: 20px;
+      }
 
       a {
-        color: $MainTextColor;
+        color: $PrimarlyColor;
         text-decoration: none;
-        padding: 20px 160px 20px 20px;
+        padding: 20px 160px 20px 0;
         font-family: $MainFontFamily;
       }
 
@@ -101,6 +111,36 @@
         transition: all 0.3s ease;
       }
 
+      &:last-child{
+        border-top: 2px solid $PrimarlyColor;
+        margin-top: 200px;
+
+        &:hover {
+          border-top: none;
+        }
+      }
+
     }
+  }
+}
+
+
+.hide{
+  display: none
+}
+
+.sidebarClosed {
+  width: 70px;
+
+  ul {
+    width: 70px;
+  }
+}
+
+.short {
+  width: 70px;
+
+  img {
+    display: none;
   }
 }
