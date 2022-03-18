@@ -1,0 +1,9 @@
+<div class="sidebarHeader">
+  <img src="assets/Images/Logo-Proxym.svg" alt="Logo Proxym">
+  <span class="icon-menu"></span>
+</div>
+<nav class="sidebar">
+  <ul>
+    <li *ngFor="let link of links"><span [classList]="link.icon"></span><a [href]="link.route">{{link.name}}</a></li>
+  </ul>
+</nav>
