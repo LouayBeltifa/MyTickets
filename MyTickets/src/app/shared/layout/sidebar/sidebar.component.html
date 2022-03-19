@@ -1,16 +1,29 @@
-<div #SidebarHeader class="sidebarHeader short">
-  <img src="assets/Images/Logo-Proxym.svg" alt="Logo Proxym">
-  <span class="icon-menu fs-30" (click)="toggle()"></span>
-</div>
+<ng-sidebar-container>
 
-<nav #MainSidebar class="sidebar hide">
-  <ul>
-    <li [classList]="link.active" *ngFor="let link of links"><a class="fs-18" [href]="link.route"><span [classList]="link.class"></span>{{link.name}}</a></li>
-  </ul>
-</nav>
+  <!-- A sidebar -->
+  <ng-sidebar #sidebar [(opened)]="opened" mode="push" [dock]="true" dockedSize="100px" [animate]="true">
 
-<nav #ClosedSideBar class="sidebar sidebarClosed">
-  <ul>
-    <li [classList]="link.active" *ngFor="let link of links"><a class="fs-18" [href]="link.route"><span [classList]="link.class"></span></a></li>
-  </ul>
-</nav>
+    <div class="sideBarHeader">
+      <img src="assets/Images/Logo-Proxym.svg">
+      <button (click)="toggleSidebar()"><span class="icon-menu fs-25"></span></button>
+    </div>
+
+    <div class="SideBarBody">
+      <ul>
+        <li [classList]="link.active"  *ngFor="let link of links">
+          <a [href]="link.route">
+            <span [classList]="link.class"></span>
+            <span class="linkTitle fs-18">{{link.name}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content>
+    <router-outlet></router-outlet>
+  </div>
+
+</ng-sidebar-container>

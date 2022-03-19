@@ -1,101 +1,79 @@
 @import "src/assets/scss/variables";
 
-.sidebarHeader{
-  background-color: $SecondColor;
-  height: 50px;
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  /*padding-top: 10px;*/
 
-  span {
-    color: $PrimarlyColor;
-    cursor: pointer;
-  }
-}
+ng-sidebar-container {
+  height: 100vh;
 
-.sidebar {
-  background-color: $SecondColor;
-  height: calc(100vh - 50px);
-  width: 300px;
-
-  ul {
-    height: auto;
-    width: 300px;
-    position: absolute;
-    list-style: none;
-    margin-top: 20px;
-    padding: 0;
-
-
-    .active {
-      background-color: $PrimarlyColor;
-      * {
-        color: $ThirdTextColor;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        background-color: white;
-        right: 0;
-        bottom: 100%;
-        border-bottom-right-radius: 25px;
-        box-shadow: 10px 10px 0 $PrimarlyColor;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        background-color: white;
-        right: 0;
-        top: 100%;
-        border-top-right-radius: 25px;
-        box-shadow: 10px -10px 0 $PrimarlyColor;
-      }
+  .active {
+    background-color: $PrimarlyColor;
+    * {
+      color: $SecondColor;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      top: 100%;
+      right: 0;
+      background-color: $SecondColor;
+      border-top-right-radius: 15px;
+      box-shadow: 0 -17px 0 $PrimarlyColor;
     }
 
+    &::after {
+      content: '';
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      bottom: 100%;
+      right: 0;
+      background-color: $SecondColor;
+      border-bottom-right-radius: 15px;
+      box-shadow: 0 17px 0 $PrimarlyColor;
+    }
+  }
+
+
+
+  .sideBarHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $PrimarlyColor;
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
 
     li {
+      margin: 30px 0px;
+      padding: 10px;
+      width: 300px;
       position: relative;
-      padding: 20px;
-      margin-bottom: 30px;
-      color: $PrimarlyColor;
-
-      span {
-        margin-right: 20px;
-      }
-
-      a {
-        color: $PrimarlyColor;
-        text-decoration: none;
-        padding: 20px 160px 20px 0;
-        font-family: $MainFontFamily;
-      }
-
-
-      &:hover{
-        background-color: $PrimarlyColor;
-        *{
-          color: $ThirdTextColor;
-        }
-      }
 
       &:hover::before {
         content: '';
         position: absolute;
         height: 30px;
         width: 30px;
-        background-color: white;
+        top: 100%;
         right: 0;
-        bottom: 100%;
-        border-bottom-right-radius: 25px;
-        box-shadow: 10px 10px 0 $PrimarlyColor;
+        background-color: $SecondColor;
+        border-top-right-radius: 15px;
+        box-shadow: 0 -17px 0 $PrimarlyColor;
       }
 
       &:hover::after {
@@ -103,44 +81,67 @@
         position: absolute;
         height: 30px;
         width: 30px;
-        background-color: white;
+        bottom: 100%;
         right: 0;
-        top: 100%;
-        border-top-right-radius: 25px;
-        box-shadow: 10px -10px 0 $PrimarlyColor;
-        transition: all 0.3s ease;
+        background-color: $SecondColor;
+        border-bottom-right-radius: 15px;
+        box-shadow: 0 17px 0 $PrimarlyColor;
       }
 
-      &:last-child{
-        border-top: 2px solid $PrimarlyColor;
-        margin-top: 200px;
+      a {
+        color: $PrimarlyColor;
+        text-decoration: none;
+        padding: 15px 160px 15px 30px;
+        text-align: left;
+        font-family: $MainFontFamily;
 
-        &:hover {
-          border-top: none;
+        .linkTitle {
+          padding: 10px;
         }
       }
 
+      &:last-child{
+        margin-top: 5vh;
+        border-top: 2px solid $PrimarlyColor;
+
+        &:hover {
+          border: none;
+        }
+      }
+
+      &:hover{
+        background-color: $PrimarlyColor;
+        * {
+
+          color: $SecondColor;
+        }
+      }
+
+
     }
+
   }
+
 }
 
-
-.hide{
-  display: none
+::ng-deep .ng-sidebar {
+  background-color: white;
+  width: 300px;
 }
 
-.sidebarClosed {
-  width: 70px;
+::ng-deep .ng-sidebar--docked {
+  width: 100px;
 
-  ul {
-    width: 70px;
+
+  li {
+    width: 100px !important;
   }
-}
-
-.short {
-  width: 70px;
 
   img {
+    display: none;
+  }
+
+  .linkTitle{
     display: none;
   }
 }
