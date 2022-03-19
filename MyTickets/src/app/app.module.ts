@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
 
 import { SidebarModule } from 'ng-sidebar';
+import { LayoutModule } from '@angular/cdk/layout';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { SidebarModule } from 'ng-sidebar';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SidebarModule
+    SidebarModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

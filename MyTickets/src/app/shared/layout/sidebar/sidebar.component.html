@@ -1,7 +1,12 @@
+
+<div class="sideBarHeaderMobile">
+  <img src="assets/Images/Logo-Proxym.svg">
+  <button (click)="toggleSidebarMobile()"><span class="icon-menu fs-25"></span></button>
+</div>
 <ng-sidebar-container>
 
   <!-- A sidebar -->
-  <ng-sidebar #sidebar [(opened)]="opened" mode="push" [dock]="true" dockedSize="100px" [animate]="true">
+  <ng-sidebar #sidebar [(opened)]="opened" [mode]="!ChangeDock?'push':'slide'" [dock]="!ChangeDock" dockedSize="100px" [animate]="true">
 
     <div class="sideBarHeader">
       <img src="assets/Images/Logo-Proxym.svg">
@@ -23,7 +28,10 @@
 
   <!-- Page content -->
   <div ng-sidebar-content>
-    <router-outlet></router-outlet>
+    <div class="overlay" [style]="showOverlay?'display:block':'display:none'"></div>
+    <div class="DisplayLayout">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
 </ng-sidebar-container>

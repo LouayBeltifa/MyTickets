@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,14 +17,32 @@ export class SidebarComponent implements OnInit {
   ]
 
   opened: boolean = false;
+  public ChangeDock: boolean | undefined;
+  public showOverlay: boolean = false;
 
 
-  constructor() { }
+  constructor(public breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
+    this.breakpointObserver
+      .observe(['(max-width: 400px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          this.ChangeDock = true;
+        } else {
+          this.ChangeDock = false;
+        }
+      });
   }
+
+
 
   public toggleSidebar() {
       this.opened = !this.opened;
+ }
+
+ public toggleSidebarMobile(){
+   this.opened = !this.opened;
+   this.showOverlay =!this.showOverlay;
  }
 }
