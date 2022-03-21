@@ -1,8 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
-
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
@@ -12,3 +9,11 @@
 @import "../src/assets/scss/font.scss";
 
 @import "assets/scss/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $PrimarlyColor;
+}
