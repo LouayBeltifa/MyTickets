@@ -3,7 +3,7 @@
 
 .navbar {
   background-color: $SecondColor;
-  width: 55vw;
+  width: 70vw;
   z-index: 0;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -28,6 +28,7 @@
 @media screen and (max-width: 500px) {
   .navbar {
     width: 90vw;
+    border-radius: 50px;
   }
 
 }
