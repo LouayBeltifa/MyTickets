@@ -1,10 +1,13 @@
-.cards{
+@use "/src/assets/scss/variables" as v;
+
+.cards {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     width: 50%;
     grid-gap:1rem; 
     margin-top: 9rem;
     margin-left: 27rem;
+}
     .cardSingle{
         display: flex;
         justify-content:space-between;
@@ -13,6 +16,7 @@
         height: 110px;
         border-radius: 10px;
         box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+        background-color: v.$SecondColor;
         h1{
             font-family: "PoppinsExtraBold";
             font-size: 24px;
@@ -23,7 +27,7 @@
         }
     }
        
-}
+
     .number{
         font-family: 'PoppinsExB' ;
         font-size: 1rem;
@@ -34,14 +38,30 @@
         font-size: 0.8rem;
         margin-top: 3px;
     }
-@media only screen and (max-width: 500px){
+   
+    
+/*@media only screen and (max-width: 500px){
     .cards{
         overflow-x: hidden;
         width:100%;
         margin-left: 0px;
-    
-
     }
     
+
+}*/
+
+.cardS {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid gray;
+    .iconCarousel {
+        img {
+            width: 100px;
+        }
+    }
+
 
 }
