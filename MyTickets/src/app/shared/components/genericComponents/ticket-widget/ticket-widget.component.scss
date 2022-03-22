@@ -1,13 +1,30 @@
-.card{
-    position: relative;
-    padding:10px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-    border-style: none;
-    max-width: 200px;
- 
-     .number{
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 50%;
+    grid-gap:1rem; 
+    margin-top: 9rem;
+    margin-left: 27rem;
+    .cardSingle{
+        display: flex;
+        justify-content:space-between;
+        padding: 1.5rem;
+        width: 250px;
+        height: 110px;
+        border-radius: 10px;
+        box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+        h1{
+            font-family: "PoppinsExtraBold";
+            font-size: 24px;
+        }
+        .ticketStatu{
+            font-family: "Poppins";
+            font-size: 14px;
+        }
+    }
+       
+}
+    .number{
         font-family: 'PoppinsExB' ;
         font-size: 1rem;
 
@@ -17,8 +34,14 @@
         font-size: 0.8rem;
         margin-top: 3px;
     }
+@media only screen and (max-width: 500px){
+    .cards{
+        overflow-x: hidden;
+        width:100%;
+        margin-left: 0px;
+    
 
- 
+    }
     
-    
+
 }

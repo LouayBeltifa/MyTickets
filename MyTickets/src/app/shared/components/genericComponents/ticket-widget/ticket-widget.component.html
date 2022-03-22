@@ -1,9 +1,14 @@
-<div class="card">
-    <div class="item">
-        <div class="number">250</div>
-        <div class="ticketStatu">Ticket en stock</div>
-    </div>
-    <div class="ticketIcon">
-        <span class="icon icon-home"></span>
+<div class="cards">
+    <div class="cardSingle" *ngFor="let ticket of ticketContent">
+        <div >
+             <img src={{ticket.icon}} alt="">
+        </div>
+
+        <div >
+            <h1>{{ticket.sold}}</h1>
+            <span class="ticketStatu">{{ticket.statut}}</span>
+        </div>
+
     </div>
 </div>
+ 

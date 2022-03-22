@@ -1,0 +1,71 @@
+@use "/src/assets/scss/variables" as v;
+
+#divWeatherMain{
+    display: flex;
+    justify-content: space-between;
+    box-shadow:v.$bs;
+    border-radius: 15px;
+    width: 200px;
+    height: 150px;
+    background-color:v.$SecondColor;
+    color: v.$MainTextColor;  
+    margin-left: 10%;  
+    margin-bottom: 20%;
+}
+
+.weatherWidgetRow {
+    display:flex;
+    margin:0 auto;
+    margin-bottom: 50px;
+    width: 30%;
+    justify-items: center;
+   
+}
+.weatherInfo{
+    margin-top: 20px;
+    margin-right: 20px;
+    .weatherName{
+        font-family: 'PoppinsRegular';
+        font-size: 18px;
+    }
+        .weatherTemp{
+            font-family: 'PoppinsBold';
+            font-size: 25px;
+        }
+}
+
+.sun{
+   
+    margin-top:30px;
+    margin-left:10px;
+    font-size:95px;
+    color: rgb(255, 255, 0);
+    filter: drop-shadow( 1px 1px 10px rgb(255, 255, 0));
+}
+
+.moon{
+    font-size:140px;
+    color: rgba(153, 146, 146, 0.199);
+    filter: drop-shadow( 1px 1px 10px white);
+}
+
+.cloudDiv{
+    margin-top: 47px;
+}
+
+.cloud{
+    color: rgb(104, 175, 197);
+    filter: drop-shadow( 1px 1px 5px rgb(104, 175, 197));
+    font-size:60px;
+    animation-name: cloudMovement;
+    animation-iteration-count: infinite;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    
+}
+
+@keyframes cloudMovement{
+    from{margin-left:-40px;}
+    to{margin-left:-25px;}
+}
