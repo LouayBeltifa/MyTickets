@@ -25,7 +25,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.breakpointObserver
-      .observe(['(max-width: 400px)'])
+      .observe(['(max-width: 500px)'])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           this.ChangeDock = true;

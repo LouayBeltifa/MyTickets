@@ -8,20 +8,25 @@ import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
 
 import { SidebarModule } from 'ng-sidebar';
 import { LayoutModule } from '@angular/cdk/layout';
+import { UserHeaderComponent } from './shared/layout/user-header/user-header.component';
 
-
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import {NotificationComponent} from "./shared/layout/user-header/notification/notification.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    SidebarComponent,
+    UserHeaderComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SidebarModule,
-    LayoutModule
+    LayoutModule,
+    BsDropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

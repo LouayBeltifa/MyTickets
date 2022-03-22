@@ -1,0 +1,11 @@
+<div class="btn-group" dropdown placement="bottom left">
+  <button id="button-container" dropdownToggle type="button" class="NotifBtn"
+          aria-controls="dropdown-container">
+    <span class="icon-bell fs-24"></span>
+    <span class="Circle">{{notifications.length}}</span>
+  </button>
+  <ul id="dropdown-container" *dropdownMenu class="dropdown-menu dropdown-menu-end"
+      role="menu" aria-labelledby="button-container">
+    <li role="menuitem" *ngFor="let elem of notifications"><p class="dropdown-item">{{elem.desc}}</p></li>
+  </ul>
+</div>

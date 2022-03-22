@@ -29,7 +29,8 @@
   <!-- Page content -->
   <div ng-sidebar-content>
     <div class="overlay" [style]="showOverlay?'display:block':'display:none'"></div>
-    <div class="DisplayLayout">
+    <div class="DisplayLayout d-flex flex-column align-items-center">
+      <app-user-header></app-user-header>
       <router-outlet></router-outlet>
     </div>
   </div>

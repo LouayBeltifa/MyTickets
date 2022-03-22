@@ -1,0 +1,26 @@
+@import "src/assets/scss/variables";
+
+.NotifBtn{
+  background-color: transparent;
+  border: none;
+  margin-left: -50px;
+}
+
+
+.icon-bell {
+  position: absolute;
+  color: #636C72;
+}
+
+.Circle {
+  position: relative;
+  background-color: #FF6760;
+  color: white;
+  border-radius: 50%;
+  bottom: 65%;
+  left: 60%;
+  font-size: 12px;
+  padding: 5px 8px;
+  font-family: $MainFontFamily;
+  border: 1px solid $SecondColor;
+}

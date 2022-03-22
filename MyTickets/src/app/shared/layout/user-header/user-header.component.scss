@@ -1,0 +1,33 @@
+@import "src/assets/scss/variables";
+
+
+.navbar {
+  background-color: $SecondColor;
+  width: 55vw;
+  z-index: 0;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .userinfo {
+
+    img {
+      margin-top: 5px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    p{
+      margin-top: 10px;
+      font-family: $MainFontFamily;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    width: 90vw;
+  }
+
+}

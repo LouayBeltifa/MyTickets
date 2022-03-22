@@ -134,9 +134,10 @@ ng-sidebar-container {
   background-color: black;
   width: 100vw;
   height: 100vh;
-  opacity: 0.7;
+  opacity: 0.5;
   position: absolute;
   top: 0;
+  z-index: 100;
 }
 
 ::ng-deep .ng-sidebar {
@@ -162,11 +163,15 @@ ng-sidebar-container {
 }
 
 .DisplayLayout {
-  margin-top: 100px;
+  margin-top: 25px;
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+  .DisplayLayout {
+    margin-top: 100px;
+  }
+
   .sideBarHeader {
    display: none !important;
   }
