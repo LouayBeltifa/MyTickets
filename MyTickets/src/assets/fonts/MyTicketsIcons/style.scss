@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?x0oag');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?x0oag#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?x0oag') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?x0oag') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?x0oag##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3f6nod');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3f6nod#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3f6nod') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3f6nod') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3f6nod##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,124 +27,79 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-pdf {
+.icon-mail {
   &:before {
-    content: $icon-pdf;
-  }
-}
-.icon-addTicket {
-  &:before {
-    content: $icon-addTicket;
-  }
-}
-.icon-sun {
-  &:before {
-    content: $icon-sun;
-  }
-}
-.icon-moon {
-  &:before {
-    content: $icon-moon;
-  }
-}
-.icon-addService {
-  &:before {
-    content: $icon-addService;
-  }
-}
-.icon-validation {
-  &:before {
-    content: $icon-validation;
-  }
-}
-.icon-services {
-  &:before {
-    content: $icon-services;
-  }
-}
-.icon-edit {
-  &:before {
-    content: $icon-edit;
-  }
-}
-.icon-calender {
-  &:before {
-    content: $icon-calender;
-  }
-}
-.icon-notification {
-  &:before {
-    content: $icon-notification;
-  }
-}
-.icon-hide {
-  &:before {
-    content: $icon-hide;
+    content: $icon-mail; 
   }
 }
 .icon-menu {
   &:before {
-    content: $icon-menu;
+    content: $icon-menu; 
   }
 }
-.icon-Vector {
+.icon-bell {
   &:before {
-    content: $icon-Vector;
+    content: $icon-bell; 
   }
 }
 .icon-home {
   &:before {
-    content: $icon-home;
+    content: $icon-home; 
   }
 }
-.icon-ticket {
+.icon-pencil {
   &:before {
-    content: $icon-ticket;
-  }
-}
-.icon-mail {
-  &:before {
-    content: $icon-mail;
+    content: $icon-pencil; 
   }
 }
 .icon-history {
   &:before {
-    content: $icon-history;
+    content: $icon-history; 
+  }
+}
+.icon-calendar {
+  &:before {
+    content: $icon-calendar; 
   }
 }
 .icon-search {
   &:before {
-    content: $icon-search;
+    content: $icon-search; 
   }
 }
-.icon-delete {
+.icon-bin2 {
   &:before {
-    content: $icon-delete;
+    content: $icon-bin2; 
   }
 }
-.icon-cloud {
+.icon-eye {
   &:before {
-    content: $icon-cloud;
+    content: $icon-eye; 
   }
 }
 .icon-eye-blocked {
   &:before {
-    content: $icon-eye-blocked;
-  }
-}
-.icon-exit {
-  &:before {
-    content: $icon-exit;
+    content: $icon-eye-blocked; 
   }
 }
 .icon-checkmark {
   &:before {
-    content: $icon-checkmark;
+    content: $icon-checkmark; 
+  }
+}
+.icon-exit {
+  &:before {
+    content: $icon-exit; 
   }
 }
 .icon-dropbox {
   &:before {
-    content: $icon-dropbox;
+    content: $icon-dropbox; 
+  }
+}
+.icon-file-excel {
+  &:before {
+    content: $icon-file-excel; 
   }
 }
 

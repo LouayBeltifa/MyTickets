@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-sidebar',
@@ -8,16 +9,16 @@ import {Component, OnInit} from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   links = [
-    {name:"Dashboard", route:"#Dashboard", class:"icon-home fs-23",active:"active"},
-    {name:"History", route:"#History", class:"icon-history fs-23"},
-    {name:"Validation", route:"#Validation", class:"icon-checkmark fs-23"},
-    {name:"Services", route:"#Services", class:"icon-dropbox fs-23"},
-    {name:"Logout", route:"#logout", class:"icon-exit fs-23"}
+    {name:"dashboard", route:"#Dashboard", class:"icon-home fs-23"},
+    {name:"history", route:"/history", class:"icon-history fs-23"},
+    {name:"Validate", route:"/validate", class:"icon-checkmark fs-23"},
+    {name:"services", route:"#Services", class:"icon-dropbox fs-23"},
+    {name:"logout", route:"#logout", class:"icon-exit fs-23"}
   ]
   event: string = 'sidebar';
-  opened:boolean = true;
+  opened:boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 

@@ -5,10 +5,10 @@
   animation-name: slideIn;
   height: 100vh;
   width: 250px;
-  margin-right: 100px;
   background-color: var.$SecondColor;
-  position: fixed;
-  z-index: 100;
+  margin-right: 40px;
+  opacity: 1;
+  /*position: fixed;*/
 
 
   .Sidebar-Header{
@@ -45,8 +45,7 @@
           margin-bottom: 30px;
           color: var.$PrimarlyColor;
           text-decoration: none;
-          font-family: var.$MainFontFamily;
-          font-weight: bold;
+          font-family: var.$MediumFontFamily;
 
           span {
             margin-right: 20px;
@@ -202,6 +201,7 @@
   .sidebar {
     margin-top: 70px;
     z-index: 100;
+    position: fixed;
 
 
     .Sidebar-Header {
@@ -214,4 +214,20 @@
   .sidebarMobile {
     display: flex;
   }
+
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+    position: fixed;
+    display: none;
+  }
+}
+
+
+
+.show {
+  display: block;
 }

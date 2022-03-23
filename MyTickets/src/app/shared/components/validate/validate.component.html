@@ -1,8 +1,5 @@
-<div class=" bg-PrimarlyColor">
+<div>
     <div class="container ">
-
-
-        
         <div class="row">
             <div class=" col-4 search d-flex justify-content-start pt-2 mt-2 mb-4">
                 <input class="form-control "  type="text" placeholder="Recherche.." name="term" [(ngModel)]="term">
@@ -12,15 +9,15 @@
                   <button class="btn btn-outline btn-PrimarlyColor drowpdoun"  ngbDropdownToggle>filtrage</button>
                   <div *ngFor="let e of users ">
                   <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
-                    
+
                     <button ngbDropdownItem *ngIf="e.isPayed==true">Valider</button>
                     <button ngbDropdownItem *ngIf="e.isPayed==false">Non valider</button>
                     <button ngbDropdownItem >Mombres aboutir</button>
                     <button ngbDropdownItem>Mombres exclus</button>
                   </div></div>
                 </div>
-            
-    
+
+
         </div>
          </div>
 
@@ -42,7 +39,7 @@
                  <pagination-controls class="paginate"  (pageChange)="p = $event"></pagination-controls>
               </div>
         </div>
-        
+
     </div>
 </div>
 
