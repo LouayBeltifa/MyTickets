@@ -1,0 +1,31 @@
+@import "./variables";
+
+$PrimarlyColor : #572AD7;
+$SecondColor : white;
+$MainTextColor : black;
+$SecondTextColor : #572AD7;
+$ThirdTextColor : white;
+$Red : red;
+$Green : Green;
+
+$colors :("PrimarlyColor":$PrimarlyColor,
+          "SecondColor":$SecondColor,
+          "MainTextColor":$MainTextColor,
+          "SecondTextColor":$SecondTextColor,
+          "ThirdTextColor":$ThirdTextColor,
+          "Red":$Red,
+          "Green":$Green);
+$theme-colors: ( "PrimarlyColor":$PrimarlyColor,
+                 "SecondColor":$SecondColor,
+                 "MainTextColor":$MainTextColor,
+                 "SecondTextColor":$SecondTextColor,
+                 "ThirdTextColor":$ThirdTextColor,
+                 "Red":$Red,
+                 "Green":$Green,);
+$PrimarlyColor: map_get($theme-colors, "PrimarlyColor");
+$SecondColor: map_get($theme-colors, "SecondColor");
+$MainTextColor: map_get($theme-colors, "MainTextColor");
+$SecondTextColor: map_get($theme-colors, "SecondTextColor");
+$ThirdTextColor: map_get($theme-colors, "ThirdTextColor");
+$Red: map_get($theme-colors, "Red");
+$Green: map_get($theme-colors, "Green");

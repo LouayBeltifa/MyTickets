@@ -1,0 +1,24 @@
+@import"src/styles.scss";
+$espace:10px 10px 10px 10px;
+.bg-PrimarlyColor{
+    background-color: $PrimarlyColor;
+    height:$h-100-vh;
+    
+}
+.bg-SecondColor{
+    background-color: $SecondColor;
+}
+.border{
+    border-color: $PrimarlyColor;
+    border-radius: 5px;
+    margin: $espace;
+    
+
+}
+.text-PrimarlyColor{
+    color:$PrimarlyColor;
+    padding: $espace;
+}
+.pading-body{
+    padding: $espace;
+}

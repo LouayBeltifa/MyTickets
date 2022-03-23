@@ -1,0 +1,37 @@
+<div class="bg-PrimarlyColor">
+<div class="container" >
+    <div class="bg-SecondColor pt-2 pb-3 mb-4"> notif</div>
+    <div class="row">
+        <div class=" col-4 d-flex justify-content-flex-end pt-2 mt-2 mb-4 ">
+
+            <input
+            class="form-control col-3"
+            placeholder="Date"
+            bsDatepicker
+            [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  selectFromOtherMonth: true }" name="date" [(ngModel)]="date" >
+        </div>
+      </div>
+
+    <div class="bg-SecondColor pt-2 pb-3 ">
+        <div class="border" *ngFor="let i of datvalid |filter :date | paginate: { itemsPerPage: 3, currentPage: p }">
+    
+              <div class=" text-PrimarlyColor" >
+                  <small>{{i.date}}</small>
+                  <p>{{i.nom}}</p>
+                <p >vaider </p>
+              </div>
+
+        </div>
+    
+    
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <pagination-controls class="paginate" (pageChange)="p = $event" ></pagination-controls>
+      </div>
+   </div>
+
+    
+</div>
+
+</div>

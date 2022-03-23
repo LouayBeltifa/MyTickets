@@ -1,0 +1,51 @@
+<div class=" bg-PrimarlyColor">
+    <div class="container ">
+
+
+        
+        <div class="row">
+            <div class=" col-4 search d-flex justify-content-start pt-2 mt-2 mb-4">
+                <input class="form-control "  type="text" placeholder="Recherche.." name="term" [(ngModel)]="term">
+            </div>
+              <div class="col d-flex justify-content-flex-end align-items-Flex-end pt-2 mt-2 mb-4 ml-8">
+                <div ngbDropdown class="d-inline-block">
+                  <button class="btn btn-outline btn-PrimarlyColor drowpdoun"  ngbDropdownToggle>filtrage</button>
+                  <div *ngFor="let e of users ">
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
+                    
+                    <button ngbDropdownItem *ngIf="e.isPayed==true">Valider</button>
+                    <button ngbDropdownItem *ngIf="e.isPayed==false">Non valider</button>
+                    <button ngbDropdownItem >Mombres aboutir</button>
+                    <button ngbDropdownItem>Mombres exclus</button>
+                  </div></div>
+                </div>
+            
+    
+        </div>
+         </div>
+
+        <div>
+            <div class="row   bord-fix fixed fs-20">
+                  <div class="col-9" ><h4> Nom</h4> </div>
+                  <div class="col-3 "> <h4>Valider</h4></div>
+             </div>
+             <div class=" mb-4 fs-16 ">
+             <div class="row  bg-SecondColor border-bottom" *ngFor="let i of users |filter :term | paginate: { itemsPerPage: 10, currentPage: p }" >
+                <div class="col-1 mr-0 "><img src="assets/Images/Login Vector.svg" class="rounded-circle img-profil"  ></div>
+                <div class="col-8 ml-0 " >{{i.nom}}</div>
+                <div class="col-3"> <button class=" btn  btn-PrimarlyColor" (click)="openModal()" [disabled]="i.isPayed"> valider</button>
+                </div>
+             </div>
+        </div></div>
+        <div class="row">
+             <div class="col-6">
+                 <pagination-controls class="paginate"  (pageChange)="p = $event"></pagination-controls>
+              </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+

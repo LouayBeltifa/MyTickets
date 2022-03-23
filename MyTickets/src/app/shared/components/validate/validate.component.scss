@@ -1,0 +1,35 @@
+@use "../../../../assets/scss/bootstrapOverRide.scss" as over;
+
+$border-tabl: rgb(216, 221, 216);
+.bg-PrimarlyColor{
+    background-color: over.$PrimarlyColor;
+    height:over.$h-100-vh;
+    
+}
+.bg-SecondColor{
+    background-color: over.$SecondColor;
+    font-family: over.$MainFontFamily;
+}
+.bord-fix{
+    background-color: $border-tabl;
+    font-family: over.$BoldFontFamily;
+}
+
+.img-profil{
+    width: 35px;
+    height: 35px;
+}
+.search{
+    padding-left: 0%;
+    
+}
+
+
+.btn-PrimarlyColor{
+    background-color: over.$PrimarlyColor;
+    color: over.$ThirdTextColor;
+}
+.btn{outline: 0!important;
+    box-shadow: none;}
+.paginate{ background-color:over.$SecondColor;
+}
