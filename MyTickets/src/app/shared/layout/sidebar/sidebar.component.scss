@@ -1,0 +1,197 @@
+@import "src/assets/scss/variables";
+
+
+ng-sidebar-container {
+  height: 100vh;
+
+
+  .active {
+    background-color: $PrimarlyColor;
+    * {
+      color: $SecondColor;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      top: 100%;
+      right: 0;
+      background-color: $SecondColor;
+      border-top-right-radius: 15px;
+      box-shadow: 0 -17px 0 $PrimarlyColor;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      bottom: 100%;
+      right: 0;
+      background-color: $SecondColor;
+      border-bottom-right-radius: 15px;
+      box-shadow: 0 17px 0 $PrimarlyColor;
+    }
+  }
+
+
+
+  .sideBarHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $PrimarlyColor;
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+
+    li {
+      margin: 30px 0px;
+      padding: 10px;
+      width: 300px;
+      position: relative;
+
+      &:hover::before {
+        content: '';
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 100%;
+        right: 0;
+        background-color: $SecondColor;
+        border-top-right-radius: 15px;
+        box-shadow: 0 -17px 0 $PrimarlyColor;
+      }
+
+      &:hover::after {
+        content: '';
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        bottom: 100%;
+        right: 0;
+        background-color: $SecondColor;
+        border-bottom-right-radius: 15px;
+        box-shadow: 0 17px 0 $PrimarlyColor;
+      }
+
+      a {
+        color: $PrimarlyColor;
+        text-decoration: none;
+        padding: 15px 160px 15px 30px;
+        text-align: left;
+        font-family: $MainFontFamily;
+
+        .linkTitle {
+          padding: 10px;
+        }
+      }
+
+      &:last-child{
+        margin-top: 5vh;
+        border-top: 2px solid $PrimarlyColor;
+
+        &:hover {
+          border: none;
+        }
+      }
+
+      &:hover{
+        background-color: $PrimarlyColor;
+        * {
+
+          color: $SecondColor;
+        }
+      }
+
+
+    }
+
+  }
+
+}
+
+.sideBarHeaderMobile {
+  display: none;
+
+}
+
+.overlay {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+
+::ng-deep .ng-sidebar {
+  background-color: white;
+  width: 300px;
+}
+
+::ng-deep .ng-sidebar--docked {
+  width: 100px;
+
+
+  li {
+    width: 100px !important;
+  }
+
+  img {
+    display: none;
+  }
+
+  .linkTitle{
+    display: none;
+  }
+}
+
+.DisplayLayout {
+  margin-top: 100px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .sideBarHeader {
+   display: none !important;
+  }
+
+  .sideBarHeaderMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: $SecondColor;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $PrimarlyColor;
+    }
+  }
+
+  ::ng-deep .ng-sidebar {
+    margin-top: 70px;
+    z-index: 100;
+  }
+
+
+}

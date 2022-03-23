@@ -1,0 +1,39 @@
+
+<div class="sideBarHeaderMobile">
+  <img src="assets/Images/Logo-Proxym.svg" alt="">
+  <button (click)="toggleSidebarMobile()" title="b"><span class="icon-menu fs-25"></span></button>
+</div>
+<ng-sidebar-container>
+
+  <!-- A sidebar -->
+  <ng-sidebar #sidebar [(opened)]="opened" [mode]="!ChangeDock?'push':'slide'" [dock]="!ChangeDock" dockedSize="100px" [animate]="true">
+
+    <div class="sideBarHeader">
+      <img src="assets/Images/Logo-Proxym.svg" alt="">
+      <button (click)="toggleSidebar()" title="b"><span class="icon-menu fs-25" ></span></button>
+    </div>
+
+    <div class="SideBarBody">
+      <ul>
+        <li [classList]="link.active"  *ngFor="let link of links">
+          <a [href]="link.route">
+            <span [classList]="link.class"></span>
+            <span class="linkTitle fs-18">{{link.name}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content>
+    <div class="overlay" [style]="showOverlay?'display:block':'display:none'"></div>
+    <div class="DisplayLayout d-flex flex-column align-items-center">
+      <router-outlet></router-outlet>
+      <app-ticket-widget></app-ticket-widget>
+      
+    </div>
+  </div>
+
+</ng-sidebar-container>

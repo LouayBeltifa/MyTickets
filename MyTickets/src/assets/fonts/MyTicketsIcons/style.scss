@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?rv5s1t');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?rv5s1t#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?rv5s1t') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?rv5s1t') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?rv5s1t##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?x0oag');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?x0oag#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?x0oag') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?x0oag') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?x0oag##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pdf {
+  &:before {
+    content: $icon-pdf; 
+  }
+}
+.icon-addTicket {
+  &:before {
+    content: $icon-addTicket; 
+  }
+}
 .icon-sun {
   &:before {
     content: $icon-sun; 
@@ -35,16 +45,6 @@
 .icon-moon {
   &:before {
     content: $icon-moon; 
-  }
-}
-.icon-notification {
-  &:before {
-    content: $icon-notification; 
-  }
-}
-.icon-hide {
-  &:before {
-    content: $icon-hide; 
   }
 }
 .icon-addService {
@@ -70,6 +70,26 @@
 .icon-calender {
   &:before {
     content: $icon-calender; 
+  }
+}
+.icon-notification {
+  &:before {
+    content: $icon-notification; 
+  }
+}
+.icon-hide {
+  &:before {
+    content: $icon-hide; 
+  }
+}
+.icon-menue {
+  &:before {
+    content: $icon-menue; 
+  }
+}
+.icon-Vector {
+  &:before {
+    content: $icon-Vector; 
   }
 }
 .icon-home {
@@ -102,11 +122,6 @@
     content: $icon-delete; 
   }
 }
-.icon-menu {
-  &:before {
-    content: $icon-menu; 
-  }
-}
 .icon-cloud {
   &:before {
     content: $icon-cloud; 
@@ -120,6 +135,16 @@
 .icon-exit {
   &:before {
     content: $icon-exit; 
+  }
+}
+.icon-checkmark {
+  &:before {
+    content: $icon-checkmark; 
+  }
+}
+.icon-dropbox {
+  &:before {
+    content: $icon-dropbox; 
   }
 }
 
