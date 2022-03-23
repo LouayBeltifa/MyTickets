@@ -1,11 +1,9 @@
-.MainContent {
-  padding-left: 250px;
-  padding-top: 20px;
+.MainLayout {
+  padding-top: 10px;
 }
-@media screen and (max-width: 500px) {
-  .MainContent {
-    padding-left: 0;
-    padding-top: 65px;
-  }
 
+@media screen and (max-width: 500px) {
+  .MainLayout {
+    padding-top: 100px;
+  }
 }

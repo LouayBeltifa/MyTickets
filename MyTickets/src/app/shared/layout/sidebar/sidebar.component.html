@@ -11,8 +11,12 @@
   <div class="Sidebar-Links">
     <ul>
       <li *ngFor="let elem of links">
-        <a [href]="elem.route" [class]="elem.active"><span [classList]="elem.class"></span><span class="title">{{elem.name}}</span></a>
+        <a [routerLink]="elem.route" [routerLinkActive]="'active'" ><span [classList]="elem.class"></span><span class="title">{{elem.name}}</span></a>
       </li>
     </ul>
   </div>
 </nav>
+
+<div [classList]="!opened?'overlay show':'overlay'">
+
+</div>
