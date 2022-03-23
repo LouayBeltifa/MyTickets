@@ -11,6 +11,7 @@
   /*position: fixed;*/
 
 
+
   .Sidebar-Header{
     display: flex;
     align-items: center;
@@ -46,6 +47,7 @@
           color: var.$PrimarlyColor;
           text-decoration: none;
           font-family: var.$MediumFontFamily;
+
 
           span {
             margin-right: 20px;
@@ -129,7 +131,9 @@
   animation-name: slideOut;
   width: 100px;
 
+
   img {
+    transform: translateX(-200px);
     display: none;
   }
 
@@ -161,6 +165,8 @@
     width: 250px;
   }
 }
+
+
 
 .sidebarMobile{
   width: 100vw;
@@ -197,7 +203,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .sidebar {
     margin-top: 70px;
     z-index: 100;
