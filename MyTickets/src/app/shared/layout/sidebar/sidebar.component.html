@@ -1,12 +1,18 @@
-<div class="SideBarBody">
-      <ul>
-        <li [classList]="link.active"  *ngFor="let link of links">
-          <a [href]="link.route">
-            <span [classList]="link.class"></span>
-            <span class="linkTitle fs-18">{{link.name}}</span>
-          </a>
-        </li>
-      </ul>
+<div class="sidebarMobile">
+  <img src="assets/Images/Logo-Proxym.svg" alt="logo-Proxym">
+  <span class="icon-menu fs-30" (click)="toggleMenuMobile()"></span>
 </div>
 
-
+<nav [class]="this.event">
+  <div class="Sidebar-Header">
+    <img src="assets/Images/Logo-Proxym.svg" alt="logo-Proxym">
+    <span class="icon-menu fs-30" (click)="toggleMenu()"></span>
+  </div>
+  <div class="Sidebar-Links">
+    <ul>
+      <li *ngFor="let elem of links">
+        <a [href]="elem.route" [class]="elem.active"><span [classList]="elem.class"></span><span class="title">{{elem.name}}</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>

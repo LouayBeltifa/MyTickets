@@ -1,106 +1,217 @@
 @use "src/assets/scss/variables" as var;
 
-.active {
-  background-color: var.$PrimarlyColor;
-  * {
-    color: var.$SecondColor;
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    top: 100%;
-    right: 0;
-    background-color: var.$SecondColor;
-    border-top-right-radius: 15px;
-    box-shadow: 0 -17px 0 var.$PrimarlyColor;
+.sidebar {
+  animation-duration: 0.7s;
+  animation-name: slideIn;
+  height: 100vh;
+  width: 250px;
+  margin-right: 100px;
+  background-color: var.$SecondColor;
+  position: fixed;
+  z-index: 100;
+
+
+  .Sidebar-Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+
+    img {
+      width: 140px;
+    }
+
+    span {
+      color: var.$PrimarlyColor;
+      cursor: pointer;
+    }
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    bottom: 100%;
-    right: 0;
-    background-color: var.$SecondColor;
-    border-bottom-right-radius: 15px;
-    box-shadow: 0 17px 0 var.$PrimarlyColor;
+
+  .Sidebar-Links {
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+
+        a {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          padding: 15px 20px;
+          margin-bottom: 30px;
+          color: var.$PrimarlyColor;
+          text-decoration: none;
+          font-family: var.$MainFontFamily;
+          font-weight: bold;
+
+          span {
+            margin-right: 20px;
+          }
+
+          &:hover {
+            background-color: var.$PrimarlyColor;
+            color: var.$SecondColor;
+
+            &::before {
+              content: '';
+              width: 30px;
+              height: 30px;
+              background-color: var.$SecondColor;
+              position: absolute;
+              top: -30px;
+              right: 0;
+              box-shadow: 0 17px 0 var.$PrimarlyColor;
+              border-bottom-right-radius: 15px;
+            }
+
+            &::after {
+              content: '';
+              width: 30px;
+              height: 30px;
+              background-color: var.$SecondColor;
+              position: absolute;
+              bottom: -30px;
+              right: 0;
+              box-shadow: 0 -17px 0 var.$PrimarlyColor;
+              border-top-right-radius: 15px;
+            }
+          }
+        }
+
+        &:last-child {
+          border-top: 2px solid var.$PrimarlyColor;
+          margin-top: 120px;
+          &:hover {
+            border: none;
+          }
+        }
+      }
+    }
+
+    .active {
+      background-color: var.$PrimarlyColor;
+      color: var.$SecondColor !important;
+
+      &::before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-color: var.$SecondColor;
+        position: absolute;
+        top: -30px;
+        right: 0px;
+        box-shadow: 0 17px 0 var.$PrimarlyColor;
+        border-bottom-right-radius: 15px;
+      }
+
+      &::after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-color: var.$SecondColor;
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        box-shadow: 0 -17px 0 var.$PrimarlyColor;
+        border-top-right-radius: 15px;
+      }
+    }
+
   }
 }
 
-.SideBarBody {
 
-  ul {
-    overflow: hidden;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
+.sidebarDesktopCloser {
+  animation-duration: 0.7s;
+  animation-name: slideOut;
+  width: 100px;
 
-    li {
-      margin: 30px 0;
-      padding: 10px;
-      width: 300px;
-      position: relative;
+  img {
+    display: none;
+  }
 
-      &:hover::before {
-        content: '';
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        top: 100%;
-        right: 0;
-        background-color: var.$SecondColor;
-        border-top-right-radius: 15px;
-        box-shadow: 0 -17px 0 var.$PrimarlyColor;
-      }
+  .title {
+    display: none;
+  }
 
-      &:hover::after {
-        content: '';
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        bottom: 100%;
-        right: 0;
-        background-color: var.$SecondColor;
-        border-bottom-right-radius: 15px;
-        box-shadow: 0 17px 0 var.$PrimarlyColor;
-      }
+  span {
+    margin-left: 20px;
+  }
+}
 
-      a {
-        color: var.$PrimarlyColor;
-        text-decoration: none;
-        padding: 15px 160px 15px 30px;
-        text-align: left;
-        font-family: var.$MainFontFamily;
+@keyframes slideOut {
+  from{
+    width: 250px;
+  }
 
-        .linkTitle {
-          padding: 10px;
-        }
-      }
-
-      &:last-child{
-        margin-top: 5vh;
-        border-top: 2px solid var.$PrimarlyColor;
-
-        &:hover {
-          border: none;
-        }
-      }
-
-      &:hover{
-        background-color: var.$PrimarlyColor;
-        * {
-
-          color: var.$SecondColor;
-        }
-      }
+  to{
+    width: 100px;
+  }
+}
 
 
+@keyframes slideIn {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+.sidebarMobile{
+  width: 100vw;
+  height: 70px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  align-items: center;
+  justify-content: space-around;
+  display: none;
+}
+
+.sidebarMobileCloser {
+  animation-duration: 0.7s;
+  animation-name: slideOutMobile;
+  opacity: 0;
+}
+
+
+.sidebarMobileOpened {
+  z-index: 300;
+}
+
+@keyframes slideOutMobile {
+  from {
+    width: 250px;
+    opacity: 1;
+  }
+  to {
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    margin-top: 70px;
+    z-index: 100;
+
+
+    .Sidebar-Header {
+      display: none;
     }
 
+
+  }
+
+  .sidebarMobile {
+    display: flex;
   }
 }

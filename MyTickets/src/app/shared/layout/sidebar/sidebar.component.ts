@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,6 +14,9 @@ export class SidebarComponent implements OnInit {
     {name:"Services", route:"#Services", class:"icon-dropbox fs-23"},
     {name:"Logout", route:"#logout", class:"icon-exit fs-23"}
   ]
+  event: string = 'sidebar';
+  opened:boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -21,7 +24,27 @@ export class SidebarComponent implements OnInit {
   }
 
 
+  toggleMenu(){
+    if (!this.opened){
+      this.event = 'sidebar sidebarDesktopCloser';
+      this.opened=!this.opened;
+    }
+    else {
+      this.event = 'sidebar';
+      this.opened = !this.opened;
+    }
+  }
 
+  toggleMenuMobile(){
+    if (!this.opened){
+      this.event = 'sidebar sidebarMobileCloser';
+      this.opened=!this.opened;
+    }
+    else {
+      this.event = 'sidebar sidebarMobileOpened';
+      this.opened = !this.opened;
+    }
+  }
 
 
 }
