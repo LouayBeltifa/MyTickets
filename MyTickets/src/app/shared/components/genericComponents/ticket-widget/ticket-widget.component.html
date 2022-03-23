@@ -1,0 +1,38 @@
+<div class="cards d-none d-sm-grid">
+    <div class="cardSingle" *ngFor="let ticket of ticketContent">
+        <div >
+             <img src={{ticket.icon}} alt="">
+        </div>
+
+        <div >
+            <h1>{{ticket.sold}}</h1>
+            <span class="ticketStatu">{{ticket.statut}}</span>
+        </div>
+
+    </div>
+</div>
+
+
+
+<owl-carousel-o class="Carousel cards d-block d-sm-none"  [options]="customOptions">
+  
+    <ng-container *ngFor="let ticket of ticketContent">
+      <ng-template  carouselSlide>
+          <div class="cardSingle">
+            <div class="iconCarousel" >
+                <img src={{ticket.icon}} alt="">
+            </div>
+   
+           <div >
+               <h1>{{ticket.sold}}</h1>
+               <span class="ticketStatu">{{ticket.statut}}</span>
+           </div>
+
+          </div>
+    
+      </ng-template>
+    </ng-container>
+      
+    </owl-carousel-o>
+
+ 
