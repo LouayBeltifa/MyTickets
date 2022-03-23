@@ -10,7 +10,6 @@ import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
 import { UserHeaderComponent } from './shared/layout/user-header/user-header.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
 
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import {NotificationComponent} from "./shared/layout/user-header/notification/notification.component";
 import { ChartWidgetComponent } from './shared/components/genericComponents/chart-widget/chart-widget.component';
 
@@ -46,9 +45,10 @@ import { ModalComponent } from './shared/components/modal/modal.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     BsDropdownModule,
-    CarouselModule
+    CarouselModule,
     BrowserAnimationsModule,
-    Ng2SearchPipeModule,FormsModule,
+    Ng2SearchPipeModule,
+    FormsModule,
     NgxPaginationModule,
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),

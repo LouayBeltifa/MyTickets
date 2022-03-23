@@ -1,7 +1,11 @@
 .MainContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-left: 250px;
   padding-top: 20px;
+}
+@media screen and (max-width: 500px) {
+  .MainContent {
+    padding-left: 0;
+    padding-top: 65px;
+  }
+
 }
