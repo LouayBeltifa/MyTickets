@@ -1,6 +1,20 @@
-<div class="btn-group" role="group" aria-label="Basic outlined example"
-  *ngFor="let b from buttons ">
-    <button type="button" class="btn btn-outline-primary">
-      <span class="icon icon-{{b.iconBtn}}"></span>{{b.nameBtn}}
-    </button>
+<div class="groupAll d-flex justify-content-center  align-content-center flex-wrap">
+  
+  <div class="btn-group" role="group" aria-label="Basic outlined example" *ngFor="let b of buttons ">
+    <div class="c"> 
+      <button type="button" class="btn btn-outline-primary align-content-center flex-wrap">
+        <span class="icon icon-{{b.iconBtn}}"></span>
+        <span class="name  ">   {{b.nameBtn}}</span>
+       
+        </button>
+      
+     
+  
+    </div>
+  
   </div>
+
+
+  </div>
+  
+

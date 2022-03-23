@@ -1,0 +1,40 @@
+@use "/src/assets/scss/variables" as v ;
+.groupAll{
+    background-color: white;   
+    box-shadow: v.$bs;
+    width: 35vw;
+    height: 25vh;
+    border-radius: 10px;  
+    
+   
+}
+.btn-group{
+   
+}
+
+.btn{
+    
+    display: inline-grid;
+    background-color: v.$PrimarlyColor;
+    height: 120px;
+    margin-inline: 8px;
+    border-radius: 13px;
+
+   
+
+
+    .name{
+        width: 90px;
+        font-family: "PoppinsLight";
+        color: v.$ThirdTextColor;
+    }
+    
+
+    .icon{
+        color: white;
+        font-size: 40px;
+    }
+   
+   
+    
+}

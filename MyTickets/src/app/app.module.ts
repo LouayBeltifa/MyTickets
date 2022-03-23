@@ -23,8 +23,8 @@ import { HistoryComponent } from './shared/components/history/history.component'
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {  ReactiveFormsModule } from '@angular/forms';
 import { NgxDateRangeModule } from 'ngx-daterange';
+import {  ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './shared/components/modal/modal.component';
 @NgModule({
   declarations: [

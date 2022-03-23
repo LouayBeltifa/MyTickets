@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ChartWidgetComponent implements OnInit {
  
   buttons=[
-    {iconBtn:"addTicket",nameBtn:"Add Tickets Stock"},
+    {iconBtn:"addTicket",nameBtn:"Add Tickets  Stock"},
     {iconBtn:"mail", nameBtn:"send Email"},
     { iconBtn:"pdf", nameBtn:"Generate Reports"}
   ]
