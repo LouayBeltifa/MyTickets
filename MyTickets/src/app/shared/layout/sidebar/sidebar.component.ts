@@ -16,9 +16,9 @@ export class SidebarComponent implements OnInit {
     {name:"logout", route:"#logout", class:"icon-exit fs-23"}
   ]
   event: string = 'sidebar';
-  opened:boolean = false;
+  opened:boolean = true;
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
 

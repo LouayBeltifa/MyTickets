@@ -1,0 +1,45 @@
+
+
+@use "/src/assets/scss/variables" as v;
+
+.card{
+  
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:1rem; 
+        margin-top: 9rem;
+        background-color: transparent;
+}
+        
+        .card-body{
+        justify-content:space-between;
+        box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+        background-color: v.$SecondColor;
+        border-radius: 10px;
+       
+            h1{
+                font-family: "PoppinsExtraBold";
+                font-size: 24px;
+            
+            }
+            .ticketStatu{
+                font-family: "Poppins";
+                font-size: 14px;
+                //padding-left: 7rem;           
+            }
+ 
+           
+        }
+    
+    .c{
+        display: flex;
+        .d{
+            padding-left: 1rem;
+
+            
+        }
+    }
+  
+
+    
+   
