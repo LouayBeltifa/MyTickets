@@ -1,5 +1,5 @@
 
-    <div class="card d-none d-sm-grid">
+    <div class="card container-fluid">
         <div class="card-body" *ngFor="let ticket of ticketContent">
             <div class="c ">
                 <img src={{ticket.icon}} alt="">
@@ -12,11 +12,10 @@
         </div>
     </div>
 
-    <owl-carousel-o class="Carousel cards d-block d-sm-none"  [options]="customOptions">
-  
+    <owl-carousel-o class="Carousel "  [options]="customOptions">
         <ng-container *ngFor="let ticket of ticketContent">
-          <ng-template  carouselSlide>
-              <div class="cardSingle">
+          <ng-template class="c" carouselSlide>
+              <div >
                 <div class="iconCarousel" >
                     <img src={{ticket.icon}} alt="">
                 </div>
