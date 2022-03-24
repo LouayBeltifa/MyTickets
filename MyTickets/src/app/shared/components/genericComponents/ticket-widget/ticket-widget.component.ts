@@ -11,16 +11,26 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class TicketWidgetComponent implements OnInit {
   customOptions: OwlOptions = {
-    navText:["",""],
-    margin:12,
-    
-    center: true  ,
-    items:1,
-    loop:false,
-    responsive:{
-        600:{
-            items:4
-        }
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
     },
     nav: true
   }

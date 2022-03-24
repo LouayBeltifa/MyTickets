@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ButtonsGroupWidgetComponent } from './buttons-group-widget.component';
 
-import { ChartWidgetComponent } from './chart-widget.component';
 
 describe('ChartWidgetComponent', () => {
-  let component: ChartWidgetComponent;
-  let fixture: ComponentFixture<ChartWidgetComponent>;
+  let component: ButtonsGroupWidgetComponent;
+  let fixture: ComponentFixture<ButtonsGroupWidgetComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChartWidgetComponent ]
+      declarations: [ ButtonsGroupWidgetComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChartWidgetComponent);
+    fixture = TestBed.createComponent(ButtonsGroupWidgetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

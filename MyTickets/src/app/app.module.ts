@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,8 +12,7 @@ import { UserHeaderComponent } from './shared/layout/user-header/user-header.com
 import {CarouselModule} from "ngx-owl-carousel-o";
 
 import {NotificationComponent} from "./shared/layout/user-header/notification/notification.component";
-import { ChartWidgetComponent } from './shared/components/genericComponents/chart-widget/chart-widget.component';
-
+import { ButtonsGroupWidgetComponent } from './shared/components/genericComponents/buttons-group-widget/buttons-group-widget.component';
 
 import { ValidateComponent } from './shared/components/validate/validate.component';
 import {NgxPaginationModule} from 'ngx-pagination';
@@ -35,7 +35,7 @@ import { ModalComponent } from './shared/components/modal/modal.component';
     TicketWidgetComponent,
     WeatherWidgetComponent,
     SidebarComponent,
-    ChartWidgetComponent,
+    ButtonsGroupWidgetComponent,
     ValidateComponent,
     HistoryComponent,
     ModalComponent,
