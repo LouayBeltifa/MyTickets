@@ -27,6 +27,8 @@ import { NgxDateRangeModule } from 'ngx-daterange';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { UserDashboardComponent } from './shared/dashboard/user-dashboard/user-dashboard.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartsWidgetComponent } from './shared/components/genericComponents/charts-widget/charts-widget.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,11 +43,11 @@ import { UserDashboardComponent } from './shared/dashboard/user-dashboard/user-d
     HistoryComponent,
     ModalComponent,
     UserDashboardComponent,
+    ChartsWidgetComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     BsDropdownModule,
     CarouselModule,
     BrowserAnimationsModule,
@@ -58,8 +60,8 @@ import { UserDashboardComponent } from './shared/dashboard/user-dashboard/user-d
     NgbModule,
     NgxDateRangeModule,
     ReactiveFormsModule,
-
-
+    NgxChartsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
