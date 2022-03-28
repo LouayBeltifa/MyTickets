@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {SidebarServiceService} from "./sidebar-service.service";
 
 @Component({
   selector: 'app-sidebar',
@@ -12,13 +12,18 @@ export class SidebarComponent implements OnInit {
     {name:"dashboard", route:"#Dashboard", class:"icon-home fs-23"},
     {name:"history", route:"/history", class:"icon-history fs-23"},
     {name:"Validate", route:"/validate", class:"icon-checkmark fs-23"},
-    {name:"services", route:"#Services", class:"icon-dropbox fs-23"},
+    {name:"services", route:"/services", class:"icon-dropbox fs-23"},
     {name:"logout", route:"#logout", class:"icon-exit fs-23"}
   ]
   event: string = 'sidebar';
-  opened:boolean = true;
+  opened:boolean | undefined;
 
-  constructor() { }
+  constructor(private SidebarService: SidebarServiceService) {
+    this.opened = SidebarService.isSidebarVisible;
+    this.SidebarService.sidebarVisibilityChange.subscribe(value => {
+      this.opened = value;
+    });
+  }
 
   ngOnInit(): void {
 
@@ -26,24 +31,24 @@ export class SidebarComponent implements OnInit {
 
 
   toggleMenu(){
-    if (!this.opened){
-      this.event = 'sidebar sidebarDesktopCloser';
-      this.opened=!this.opened;
+    if (this.opened){
+      this.event = 'sidebar ';
+      this.SidebarService.toggleSidebarVisibility();
     }
     else {
-      this.event = 'sidebar';
-      this.opened = !this.opened;
+      this.event = 'sidebar sidebarDesktopCloser';
+      this.SidebarService.toggleSidebarVisibility();
     }
   }
 
   toggleMenuMobile(){
-    if (!this.opened){
+    if (this.opened){
       this.event = 'sidebar sidebarMobileCloser';
-      this.opened=!this.opened;
+      this.SidebarService.toggleSidebarVisibility();
     }
     else {
       this.event = 'sidebar sidebarMobileOpened';
-      this.opened = !this.opened;
+      this.SidebarService.toggleSidebarVisibility();
     }
   }
 
