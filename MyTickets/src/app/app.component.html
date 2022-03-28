@@ -1,6 +1,6 @@
 <div class="d-flex">
   <app-sidebar></app-sidebar>
-  <div class="MainLayout container">
+  <div [classList]="!isSidebarVisible?'MainLayout container':'MainLayout container short'">
     <app-user-header class="row"></app-user-header>
     <router-outlet ></router-outlet>
   </div>
