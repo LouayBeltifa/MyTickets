@@ -13,17 +13,3 @@ export var tickets=[
     }
 
 ];
-export var ticketsMulti=[{
-    "ticketState":"tickets sold out",
-    "serie":[
-        {
-            "name":"january",
-            "value":152
-        },
-        {
-            "name":"jjffj",
-            "vallue":588
-        }
-    ]
-
-}]

@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 
 
@@ -8,10 +9,11 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./user-dashboard.component.scss']
 })
 export class UserDashboardComponent implements OnInit {
+
    
 
 
-  constructor() { 
+  constructor(public router: Router) { 
    
   }
 

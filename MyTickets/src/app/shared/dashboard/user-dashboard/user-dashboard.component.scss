@@ -1,7 +1,8 @@
 .all{
-    display: grid;
-    margin-left: 1.25rem;
-    margin-top: 2rem;
-    grid-template-columns: repeat(3,1fr);
+    display:flex;
+   // margin-left: 1.75rem;
+    margin-top: 3rem;
+    //grid-template-columns: repeat(2,1fr);
+    justify-content: center;
    
 }

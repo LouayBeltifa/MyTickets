@@ -1,0 +1,23 @@
+@use "/src/assets/scss/variables" as v ;
+
+.chart{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: v.$bs;
+   
+
+
+}
+.content{
+    background-color: white;
+    border-radius: 10px;
+    margin-inline: 12px;
+    
+}
+.ngx-charts-pie-chart{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}

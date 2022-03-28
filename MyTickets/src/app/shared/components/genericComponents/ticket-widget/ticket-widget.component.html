@@ -13,21 +13,22 @@
     </div>
 
     <owl-carousel-o class="Carousel "  [options]="customOptions">
-        <ng-container *ngFor="let ticket of ticketContent">
-          <ng-template class="c" carouselSlide>
-              <div >
-                <div class="iconCarousel" >
-                    <img src={{ticket.icon}} alt="">
-                </div>
-       
-               <div >
-                   <h1>{{ticket.sold}}</h1>
-                   <span class="ticketStatu">{{ticket.statut}}</span>
-               </div>
-    
-              </div>
+            <ng-container *ngFor="let ticket of ticketContent">
+              <ng-template class="c" carouselSlide>
+                  <div >
+                    <div class="iconCarousel" >
+                        <img src={{ticket.icon}} alt="">
+                    </div>
+           
+                   <div >
+                       <h1>{{ticket.sold}}</h1>
+                       <span class="ticketStatu">{{ticket.statut}}</span>
+                   </div>
         
-          </ng-template>
-        </ng-container>
-          
-        </owl-carousel-o>
+                  </div>
+            
+              </ng-template>
+            </ng-container>
+              
+            </owl-carousel-o>
+    

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { left } from '@popperjs/core';
-import { LegendOptions, LegendPosition } from '@swimlane/ngx-charts';
+import {  LegendPosition } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-charts-widget',
@@ -14,6 +14,7 @@ export class ChartsWidgetComponent implements OnInit {
     { name: 'distribute', value: 11 },
     { name: 'return', value: 11 }
   ];
+  
    multiData = [
     {
       "name": "sale",
@@ -23,15 +24,15 @@ export class ChartsWidgetComponent implements OnInit {
           "value": 30
         },
         {
-          "name": "Fabrury",
+          "name": "Fabruary",
           "value": 120
         },
         {
-          "name": "march",
+          "name": "March",
           "value": 200
         },
         {
-          "name": "april",
+          "name": "April",
           "value": 250
         }
       ]
@@ -44,14 +45,14 @@ export class ChartsWidgetComponent implements OnInit {
           "value": 160
         },
         {
-          "name": "Fabrury",
+          "name": "Fabruary",
           "value": 239
         },
         {
-          "name": "march",
+          "name": "March",
           "value": 120
         },  {
-          "name": "april",
+          "name": "April",
           "value": 203
         }
       ]},
@@ -63,16 +64,16 @@ export class ChartsWidgetComponent implements OnInit {
             "value": 270
           },
           {
-            "name": "Fabrury",
+            "name": "Fabruary",
             "value": 250
           },
           {
-            "name": "march",
+            "name": "March",
             "value": 135
           },
           {
-            "name": "april",
-            "value": 100
+            "name": "April",
+            "value": 150
           }
       ]
     }];

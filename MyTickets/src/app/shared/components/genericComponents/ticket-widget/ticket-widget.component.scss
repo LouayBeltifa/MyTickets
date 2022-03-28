@@ -5,7 +5,7 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap:1rem; 
-        margin-top: 2rem;
+        margin-top: 3rem;
         background-color: transparent;
         border: none;
     
@@ -43,12 +43,12 @@
     .Carousel{
         display: none;
     }
-   /* @media screen and (max-width: 500px){
+  /* @media screen and (max-width: 500px){
         .card{
             display: none;
         }
         .Carousel{
-            display: grid;
+            display: inline;
         }
 
     }*/
