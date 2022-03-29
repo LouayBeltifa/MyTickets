@@ -1,9 +1,12 @@
 <div *ngIf="router.url === '/dashboard/admin'">
-    <app-ticket-widget></app-ticket-widget>
-    <div class="all ">
+   
+        <app-ticket-widget></app-ticket-widget>
+
+    <div class="all container d-flex justify-content-around align-items-center">
         <app-buttons-group-widget></app-buttons-group-widget>
         <app-weather-widget></app-weather-widget>
     </div>
-
-    <app-charts-widget></app-charts-widget>
+    <div class="all container d-flex justify-content-around align-items-center">
+        <app-charts-widget></app-charts-widget>
+        </div>
 </div>

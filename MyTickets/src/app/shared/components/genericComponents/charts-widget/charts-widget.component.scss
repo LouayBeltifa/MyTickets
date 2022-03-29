@@ -5,9 +5,7 @@
     grid-template-columns: repeat(2,1fr);
     margin-top: 3rem;
     margin-bottom: 2rem;
-    box-shadow: v.$bs;
    
-
 
 }
 .content{
@@ -15,9 +13,4 @@
     border-radius: 10px;
     margin-inline: 12px;
     
-}
-.ngx-charts-pie-chart{
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
 }
