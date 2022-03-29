@@ -29,6 +29,8 @@ import { ModalComponent } from './shared/components/modal/modal.component';
 import { UserDashboardComponent } from './shared/dashboard/user-dashboard/user-dashboard.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ChartsWidgetComponent } from './shared/components/genericComponents/charts-widget/charts-widget.component';
+import { ServicesComponent } from './shared/components/services/services.component';
+import { ServiceCardComponent } from './shared/components/services/service-card/service-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +46,8 @@ import { ChartsWidgetComponent } from './shared/components/genericComponents/cha
     ModalComponent,
     UserDashboardComponent,
     ChartsWidgetComponent,
+    ServicesComponent,
+    ServiceCardComponent,
   ],
   imports: [
     BrowserModule,

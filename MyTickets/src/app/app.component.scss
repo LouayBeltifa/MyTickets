@@ -1,9 +1,15 @@
 .MainLayout {
-  padding-top: 10px;
+  padding: 10px 20px 0 250px ;
+  transition: 0.7s;
 }
 
-@media screen and (max-width: 500px) {
+.short {
+  padding-left: 100px;
+}
+
+@media screen and (max-width: 600px) {
   .MainLayout {
     padding-top: 100px;
+    padding-left: 20px;
   }
 }
