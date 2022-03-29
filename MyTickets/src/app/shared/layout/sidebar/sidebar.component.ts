@@ -9,7 +9,7 @@ import {SidebarServiceService} from "./sidebar-service.service";
 export class SidebarComponent implements OnInit {
 
   links = [
-    {name:"dashboard", route:"#Dashboard", class:"icon-home fs-23"},
+    {name:"dashboard", route:"/dashboard", class:"icon-home fs-23"},
     {name:"history", route:"/history", class:"icon-history fs-23"},
     {name:"Validate", route:"/validate", class:"icon-checkmark fs-23"},
     {name:"services", route:"/services", class:"icon-dropbox fs-23"},

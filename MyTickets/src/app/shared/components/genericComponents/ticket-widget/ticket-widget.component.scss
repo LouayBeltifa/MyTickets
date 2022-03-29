@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 847b59d04c75f766cbab93e8012799ae59b9e1d4
 @use "/src/assets/scss/variables" as v;
 
 .card{
@@ -7,8 +10,10 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap:1rem; 
-        margin-top: 9rem;
+        margin-top: 3rem;
         background-color: transparent;
+        border: none;
+    
 }
         
         .card-body{
@@ -16,6 +21,17 @@
         box-shadow: 0 7px 25px rgba(0,0,0,0.08);
         background-color: v.$SecondColor;
         border-radius: 10px;
+<<<<<<< HEAD
+=======
+        .c{
+            display: flex;
+            .d{
+                padding-left: 1rem;
+    
+                
+            }
+        }
+>>>>>>> 847b59d04c75f766cbab93e8012799ae59b9e1d4
        
             h1{
                 font-family: "PoppinsExtraBold";
@@ -31,6 +47,7 @@
            
         }
     
+<<<<<<< HEAD
     .c{
         display: flex;
         .d{
@@ -43,3 +60,18 @@
 
     
    
+=======
+   
+    .Carousel{
+        display: none;
+    }
+  /* @media screen and (max-width: 500px){
+        .card{
+            display: none;
+        }
+        .Carousel{
+            display: inline;
+        }
+
+    }*/
+>>>>>>> 847b59d04c75f766cbab93e8012799ae59b9e1d4

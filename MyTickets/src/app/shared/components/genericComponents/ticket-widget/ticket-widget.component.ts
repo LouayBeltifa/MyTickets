@@ -10,11 +10,25 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
  
 })
 export class TicketWidgetComponent implements OnInit {
-  customOptions: OwlOptions = {
+  
+
+  url="../assets/Images/";
+  ticketContent=[
+   {id:1,icon:`${this.url}bleuTicket.svg`,sold:"250",statut:"tickets en stock"},
+    {id:2,icon:`${this.url}yellowTicket.svg`,sold:"100",statut:"Ticket solde out"},
+    {id:3,icon:`${this.url}greenTicket.svg`,sold:"100 DT",statut:"Total earnings"}
+  ];
+  
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+  customOptions:OwlOptions = {
     loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
@@ -33,18 +47,6 @@ export class TicketWidgetComponent implements OnInit {
       }
     },
     nav: true
-  }
-  url="../assets/Images/";
-  ticketContent=[
-   {id:1,icon:`${this.url}bleuTicket.svg`,sold:"250",statut:"tickets en stock"},
-    {id:2,icon:`${this.url}yellowTicket.svg`,sold:"100",statut:"Ticket solde out"},
-    {id:3,icon:`${this.url}greenTicket.svg`,sold:"100 DT",statut:"Total earnings"}
-  ];
-  
-
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
 }
