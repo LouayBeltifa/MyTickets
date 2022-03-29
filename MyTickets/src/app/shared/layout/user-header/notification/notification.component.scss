@@ -1,4 +1,4 @@
-@import "src/assets/scss/variables";
+@use "src/assets/scss/variables" as var;
 
 .NotifBtn{
   background-color: transparent;
@@ -21,6 +21,17 @@
   left: 60%;
   font-size: 12px;
   padding: 5px 8px;
-  font-family: $MainFontFamily;
-  border: 1px solid $SecondColor;
+  font-family: var.$MainFontFamily;
+  border: 1px solid var.$SecondColor;
+}
+
+.dropdown-menu {
+  width: 200px;
+}
+
+
+ul {
+  li {
+    margin-bottom: -10px;
+  }
 }

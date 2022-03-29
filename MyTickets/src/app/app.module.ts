@@ -31,6 +31,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ChartsWidgetComponent } from './shared/components/genericComponents/charts-widget/charts-widget.component';
 import { ServicesComponent } from './shared/components/services/services.component';
 import { ServiceCardComponent } from './shared/components/services/service-card/service-card.component';
+
 @NgModule({
   declarations: [
     AppComponent,
