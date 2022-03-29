@@ -10,20 +10,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
  
 })
 export class TicketWidgetComponent implements OnInit {
-  customOptions: OwlOptions = {
-    navText:["",""],
-    margin:12,
-    
-    center: true  ,
-    items:1,
-    loop:false,
-    responsive:{
-        600:{
-            items:4
-        }
-    },
-    nav: true
-  }
+  
+
   url="../assets/Images/";
   ticketContent=[
    {id:1,icon:`${this.url}bleuTicket.svg`,sold:"250",statut:"tickets en stock"},
@@ -35,6 +23,30 @@ export class TicketWidgetComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  customOptions:OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
   }
 
 }

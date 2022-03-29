@@ -1,0 +1,21 @@
+<div class=" groupAll   justify-content-center align-items-center" >
+  
+  <div class="btn-group " role="group" aria-label="Basic outlined example" *ngFor="let b of buttons ">
+    
+      <button type="button" value="{{b.nameBtn}}" #btn class="btn btn-outline-primary " 
+      (click)="changeView(btn.value)">
+        <span class="icon icon-{{b.iconBtn}}"></span>
+        <span class="name"> {{b.nameBtn}}</span>
+
+        </button>
+      
+     
+  
+   
+  
+  </div>
+
+
+  </div>
+  
+

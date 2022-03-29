@@ -1,26 +1,27 @@
 @use "/src/assets/scss/variables" as v ;
+@import 'animate.css';
+
 .groupAll{
     background-color: white;   
     box-shadow: v.$bs;
-    width: 35vw;
-    height: 25vh;
+    width: max-content;
     border-radius: 10px;  
-    
+  
    
 }
-.btn-group{
-   
-}
+
 
 .btn{
     
     display: inline-grid;
     background-color: v.$PrimarlyColor;
     height: 120px;
-    
     margin-inline: 8px;
-    border-radius: 13px;
-
+    
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+   
 
    
 
