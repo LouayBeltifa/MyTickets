@@ -26,6 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxDateRangeModule } from 'ngx-daterange';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './shared/components/modal/modal.component';
+import { ServicesComponent } from './shared/components/services/services.component';
+import { ServiceCardComponent } from './shared/components/services/service-card/service-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,8 @@ import { ModalComponent } from './shared/components/modal/modal.component';
     ValidateComponent,
     HistoryComponent,
     ModalComponent,
+    ServicesComponent,
+    ServiceCardComponent,
   ],
   imports: [
     BrowserModule,
